@@ -1,0 +1,347 @@
+Last login: Mon Apr  1 17:38:06 on ttys000
+samiranbisal@Samirans-MacBook-Air ~ % mongosh "mongodb+srv://cluster0.8a98hju.mongodb.net/" --apiVersion 1 --username tatai
+Enter password: ****************
+Current Mongosh Log ID:	660aea4a7d3920bd2bb55ff2
+Connecting to:		mongodb+srv://<credentials>@cluster0.8a98hju.mongodb.net/?appName=mongosh+2.1.5
+Using MongoDB:		7.0.7 (API Version 1)
+Using Mongosh:		2.1.5
+mongosh 2.2.2 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+Atlas atlas-qjf3pz-shard-0 [primary] test> (node:1793) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+showndbs
+ReferenceError: showndbs is not defined
+Atlas atlas-qjf3pz-shard-0 [primary] test> show dbs
+sample_mflix  110.23 MiB
+admin         280.00 KiB
+local          55.66 GiB
+Atlas atlas-qjf3pz-shard-0 [primary] test> use userProdctus
+switched to db userProdctus
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.insertOne({)
+Uncaught:
+SyntaxError: Unexpected token (1:23)
+
+> 1 | db.prodctus.insertOne({)
+    |                        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "id": 1,
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | "id": 1,
+    |     ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "first_name": "Barbra",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "first_name": "Barbra",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "last_name": "Plume",
+Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 | "last_name": "Plume",
+    |            ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "email": "bplume0@loc.gov",
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "email": "bplume0@loc.gov",
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "gender": "Agender",
+Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 | "gender": "Agender",
+    |         ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "ip_address": "33.100.210.93",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "ip_address": "33.100.210.93",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "city": "Novi Slankamen",
+Uncaught:
+SyntaxError: Missing semicolon. (1:6)
+
+> 1 | "city": "Novi Slankamen",
+    |       ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "color": "Yellow"
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "color": "Yellow"
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.insertOne({)
+Uncaught:
+SyntaxError: Unexpected token (1:23)
+
+> 1 | db.prodctus.insertOne({)
+    |                        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "id": 1,
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | "id": 1,
+    |     ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "first_name": "Barbra",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "first_name": "Barbra",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "last_name": "Plume",
+Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 | "last_name": "Plume",
+    |            ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "email": "bplume0@loc.gov",
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "email": "bplume0@loc.gov",
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "gender": "Agender",
+Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 | "gender": "Agender",
+    |         ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "ip_address": "33.100.210.93",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "ip_address": "33.100.210.93",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "city": "Novi Slankamen",
+Uncaught:
+SyntaxError: Missing semicolon. (1:6)
+
+> 1 | "city": "Novi Slankamen",
+    |       ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "color": "Yellow"
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "color": "Yellow"
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.insertOne({)
+Uncaught:
+SyntaxError: Unexpected token (1:23)
+
+> 1 | db.prodctus.insertOne({)
+    |                        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "id": 1,
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | "id": 1,
+    |     ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "first_name": "Barbra",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "first_name": "Barbra",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "last_name": "Plume",
+Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 | "last_name": "Plume",
+    |            ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "email": "bplume0@loc.gov",
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "email": "bplume0@loc.gov",
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "gender": "Agender",
+Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 | "gender": "Agender",
+    |         ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "ip_address": "33.100.210.93",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "ip_address": "33.100.210.93",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "city": "Novi Slankamen",
+Uncaught:
+SyntaxError: Missing semicolon. (1:6)
+
+> 1 | "city": "Novi Slankamen",
+    |       ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "color": "Yellow"
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "color": "Yellow"
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.insertOne({)
+Uncaught:
+SyntaxError: Unexpected token (1:23)
+
+> 1 | db.prodctus.insertOne({)
+    |                        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "id": 1,
+Uncaught:
+SyntaxError: Missing semicolon. (1:4)
+
+> 1 | "id": 1,
+    |     ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "first_name": "Melinde",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "first_name": "Melinde",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "last_name": "Skitt",
+Uncaught:
+SyntaxError: Missing semicolon. (1:11)
+
+> 1 | "last_name": "Skitt",
+    |            ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "email": "mskitt0@com.com",
+Uncaught:
+SyntaxError: Missing semicolon. (1:7)
+
+> 1 | "email": "mskitt0@com.com",
+    |        ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "gender": "Female",
+Uncaught:
+SyntaxError: Missing semicolon. (1:8)
+
+> 1 | "gender": "Female",
+    |         ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "ip_address": "179.138.170.90"
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "ip_address": "179.138.170.90"
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> show dbs
+sample_mflix  110.23 MiB
+admin         280.00 KiB
+local          55.66 GiB
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> "first_name": "Melinde",
+Uncaught:
+SyntaxError: Missing semicolon. (1:12)
+
+> 1 | "first_name": "Melinde",
+    |             ^
+  2 |
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> ({"first_name": "Melinde"})
+{ first_name: 'Melinde' }
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.products.find
+[Function: find] AsyncFunction {
+  returnsPromise: true,
+  apiVersions: [ 1, Infinity ],
+  returnType: 'Cursor',
+  serverVersions: [ '0.0.0', '999.999.999' ],
+  topologies: [ 'ReplSet', 'Sharded', 'LoadBalanced', 'Standalone' ],
+  deprecated: false,
+  platforms: [ 'Compass', 'Browser', 'CLI' ],
+  isDirectShellCommand: false,
+  acceptsRawInput: false,
+  shellCommandCompleter: undefined,
+  help: [Function (anonymous)] Help
+}
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> show dbs
+sample_mflix  110.23 MiB
+admin         280.00 KiB
+local          55.66 GiB
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.products.find()
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.find()
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodcuts.insertOne({'title':'iphone'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('660aef0d7d3920bd2bb55ff3')
+}
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.prodctus.find()
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> show dbs
+sample_mflix  110.23 MiB
+userProdctus    8.00 KiB
+admin         280.00 KiB
+local          55.66 GiB
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> db.products.find()
+
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+Atlas atlas-qjf3pz-shard-0 [primary] userProdctus> 
+samiranbisal@Samirans-MacBook-Air ~ % 

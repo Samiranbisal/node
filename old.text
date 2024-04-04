@@ -1,0 +1,172 @@
+const http = require("http");
+const fs = require("fs");
+
+const index = fs.readFileSync("index.html", "utf-8");
+
+const mpserver = http.createServer((req, resp) => {
+  console.log("Sarver Start");
+  resp.setHeader("tatai", "anyThing");
+  resp.setHeader("Content-Type", "text/html");
+  resp.end(index);
+  console.log(req.url);
+  switch(req.url){
+    case '/':
+      resp.setHeader('Content-Type', 'text/html');
+      resp.end(index);
+  }
+});
+
+mpserver.listen(8000);
+
+------------------Second-------------------
+
+const http = require("http");
+const fs = require("fs");
+
+const index = fs.readFileSync("index.html", "utf-8");
+const Home = fs.readFileSync("home.html", "utf-8");
+
+const mpserver = http.createServer((req, resp) => {
+  console.log(req.url);
+  switch (req.url) {
+    case "/":
+      resp.setHeader("Content-Type", "text/html");
+      resp.end(index);
+      break;
+    case "/newpage":
+      resp.setHeader("Content-Type", "text/html");
+      resp.end(Home);
+      break;
+    default:
+      resp.writeHead(404);
+      resp.end();
+  }
+});
+
+mpserver.listen(8000);
+
+-------------------Third---------------------
+
+const http = require("http");
+const fs = require("fs");
+
+const index = fs.readFileSync("index.html", "utf-8");
+const Home = fs.readFileSync("home.html", "utf-8");
+const jsData = fs.readFileSync("MOCK_DATA.json", "utf-8");
+const Data = JSON.parse(fs.readFileSync("MOCK_DATA.json", "utf-8"));
+const poduct = Data[0];
+
+const mpserver = http.createServer((req, resp) => {
+  console.log(req.url);
+
+  if (req.url.startsWith("/newpage")) {
+    const id = (req.url.split('/'))[2];
+    
+  }
+
+  switch (req.url) {
+    case "/":
+      resp.setHeader("Content-Type", "text/html");
+      resp.end(index);
+      break;
+      // case "/newpage":
+      // resp.setHeader("Content-Type", "text/html");
+      // resp.end(Home);
+      break;
+    case "/newdata":
+      resp.setHeader("Content-Type", "application/json");
+      resp.end(jsData);
+      break;
+    case "/onedata":
+      resp.setHeader("Content-Type", "application/json");
+      resp.end(poduct);
+      break;
+    default:
+      resp.writeHead(404);
+      resp.end();
+  }
+});
+
+mpserver.listen(8000);
+
+------------------Four----------------------
+
+const express = require("express");
+const app = express();
+const fs = require("fs");
+const PORT = 8000;
+
+const index = fs.readFileSync("index.html", "utf-8");
+const Data = JSON.parse(fs.readFileSync("MOCK_DATA.json", "utf-8"));
+
+app.get("/", (req, resp) => {
+  console.log("Hello Evrey One");
+  // resp.end(index);
+  // resp.sendFile("/Users/samiranbisal/Desktop/nodo js file/home.html");
+  resp.setHeader("Contant-Type", "application/json");
+  resp.status(201).json(Data);
+});
+
+app.listen(PORT, console.log("Server Star"));
+
+-----------five------------------
+
+const express = require("express");
+const app = express();
+const fs = require("fs");
+const PORT = 8000;
+
+const index = fs.readFileSync("index.html", "utf-8");
+const Data = JSON.parse(fs.readFileSync("MOCK_DATA.json", "utf-8"));
+
+app.get("/", (req, resp) => {
+  console.log("Hello Evrey One");
+  // resp.end(index);
+  // resp.sendFile("/Users/samiranbisal/Desktop/nodo js file/home.html");
+  resp.setHeader("Contant-Type", "application/json");
+  resp.status(201).json(Data);
+});
+
+app.get("/:id", (req, resp) => {
+  const userId = Number(req.params.id);
+  const datas = Data.find((p) => p.id === userId);
+  resp.json(datas);
+});
+
+// -------------create api-------------
+
+app.post("/", (req, resp) => {
+  console.log(req.body);
+  // Data.push;
+  resp.end();
+});
+
+// ---------------upDate----------------
+
+app.put("/:id", (req, resp) => {
+  const uid = Number(req.params.id);
+  const Datauid = Data.findIndex((p) => p.id === uid);
+  Data.splice(Datauid, 1, { id: uid, ...req.body });
+  resp.status(201).end();
+});
+
+app.patch("/:id", (req, resp) => {
+  const uid = Number(req.params.id);
+  const Datauid = Data.findIndex((p) => p.id === uid);
+  const uudata = Data[Datauid];
+  Data.splice(Datauid, 1, { ...uudata, ...req.body });
+  // console.log(...req.body);
+  resp.status(201).end();
+});
+
+// --------------------delete-----------------------
+
+app.delete("/:id", (req, resp) => {
+  const uid = Number(req.params.id);
+  const Datauid = Data.findIndex((p) => p.id === uid);
+  Data.splice(Datauid, 1);
+  resp.status(201).end();
+});
+
+app.listen(PORT, console.log("Server Star"));
+
